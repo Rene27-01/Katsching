@@ -20,6 +20,26 @@
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
+        <intent-filter>
+          <action android:name="android.intent.action.VIEW" />
+          <category android:name="android.intent.category.DEFAULT" />
+          <category android:name="android.intent.category.BROWSABLE" />
+          <data
+              android:scheme="katsching"
+              android:host="callback" />
+        </intent-filter>
+
+    <!-- Intent-Filter für den Signout-URL -->
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data
+                android:scheme="katsching"
+                android:host="signout" />
+        </intent-filter>
+
+
       </activity>
     </application>
 </manifest>
