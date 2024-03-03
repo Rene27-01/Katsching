@@ -28,17 +28,9 @@ function TableScreen({ setIsAuthenticated, userPool}) {
         setParticipants(newParticipants);
     };
 
-    const handleLogout = () => {
-        // Call handleSignOut with setIsAuthenticated
-        handleSignOut(setIsAuthenticated, userPool);
-    };
-
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar barStyle='dark-content' />
-            <TouchableOpacity onPress={handleLogout} style={styles.logoutButton}>
-                <Text style={styles.logoutButtonText}>Logout</Text>
-            </TouchableOpacity>
             <ScrollView contentInsetAdjustmentBehavior="automatic" style={styles.scrollView}>
                 <Text style={styles.title}>Katsching💸</Text>
                 <View style={styles.table}>

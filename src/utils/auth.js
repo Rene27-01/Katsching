@@ -1,6 +1,5 @@
 // src/utils/auth.js
 import { CognitoUserPool, AuthenticationDetails, CognitoUser, CognitoUserAttribute } from 'amazon-cognito-identity-js';
-import { Alert } from 'react-native';
 
 const poolData = {
     UserPoolId: 'eu-central-1_nIB2ZvLTt', // Ersetzen Sie mit Ihrer User Pool ID
@@ -45,13 +44,4 @@ export const registerUser = (username, password, email, onRegisterSuccess) => {
         console.log('Registrierung erfolgreich!', result);
         onRegisterSuccess();
     });
-};
-
-
-export const handleSignOut = (setIsAuthenticated, userPool) => {
-    const user = userPool.getCurrentUser();
-    if (user) {
-        user.signOut();
-    }
-    setIsAuthenticated(false);
 };
